@@ -1,3 +1,5 @@
+package Apuntes;
+
 import java.util.Random;
 public class Actividad1
 {
