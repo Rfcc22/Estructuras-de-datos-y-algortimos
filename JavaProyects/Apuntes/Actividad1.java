@@ -9,7 +9,7 @@ public class Actividad1
 
         Random randomSeat = new Random();
 
-        int assientosCine[] = new int[arrayLenght];
+        int[] assientosCine = new int[arrayLenght];
 
 
         for (int i  = 0; i < arrayLenght; i++){
