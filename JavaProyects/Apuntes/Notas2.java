@@ -2,14 +2,13 @@ package Apuntes;
 
 import java.util.Scanner;
 
+
 public class Notas2 {
-    public static void Main(String[] args) {
-        //Insertar elementos en un array en java
+    public static Scanner input = new Scanner(System.in);
+    public static int[] numberArray = new int [6];
+    public static int currentInput;
 
-        Scanner input = new Scanner(System.in);
-        int[] numberArray = new int [6];
-        int currentInput;
-
+    public static void addArray(){
         for (int i = 0; i < numberArray.length; i++) {
             while (true) {
                 try {
@@ -22,15 +21,36 @@ public class Notas2 {
             }
             numberArray[i] = currentInput;
         }
+    }
 
-        for (int i = 0; i < numberArray.length; i++){
-            System.out.print(" " + numberArray[i]);
+    public static void printArray() {
+        for (int j : numberArray) {
+            System.out.print(" " + j);
         }
+    }
+
+    public static void replaceRemoveArrayElement() {
+
+    }
+
+
+
+    public static void main(String[] args) {
+        //Insertar elementos en un array en java
+        addArray();
+        printArray();
+
+
+
+        //Ordenar arrays
+
+
 
 
 
 
     }
+
 
 }
 
