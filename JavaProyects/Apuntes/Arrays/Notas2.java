@@ -1,4 +1,4 @@
-package Apuntes;
+package Apuntes.Arrays;
 
 import java.util.Scanner;
 
