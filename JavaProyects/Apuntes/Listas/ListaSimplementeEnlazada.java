@@ -1,12 +1,12 @@
 package Apuntes.Listas;
 
-public class Lista {
+public class ListaSimplementeEnlazada {
     Nodo primerNodo;
     Nodo ultimoNodo;
 
     //Cuando se crear por primera vez una lista va a tener un nodo
 
-    Lista(){
+    ListaSimplementeEnlazada(){
         primerNodo = ultimoNodo = null; //El primer y ultimo nodo apuntan a null
     }
 

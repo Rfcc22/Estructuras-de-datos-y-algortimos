@@ -12,4 +12,13 @@ public class Nodo {
         data = objeto;
         siguiente = nodo;
     }
+
+    Object getObject() {
+        return data;
+    }
+
+    Nodo getNext(){
+        return siguiente;
+    }
+
 }
