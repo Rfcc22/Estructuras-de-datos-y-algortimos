@@ -49,6 +49,7 @@ def eliminarIngredientes():
                 break
             for postre in range(len(Postres)):
                 if (Postres[postre] == postreSeleccionado):
+                    
                     choice = int(input("Que desea hacer?\n1.- Borrar todos los ingredientes\n2.- Eliminar un ingrediente\n").strip())
                     match choice:
                         case 1:
@@ -71,6 +72,8 @@ while True:
         case 3: buscarIngredientes()
         case 4: eliminarIngredientes()
         case 5: break
+
+
 
 
 
