@@ -3,11 +3,12 @@ package Apuntes.Listas;
 public class ListaSimplementeEnlazada {
     Nodo primerNodo;
     Nodo ultimoNodo;
+    Nodo head;
 
     //Cuando se crear por primera vez una lista va a tener un nodo
 
     ListaSimplementeEnlazada(){
-        primerNodo = ultimoNodo = null; //El primer y ultimo nodo apuntan a null
+        primerNodo = ultimoNodo = head = null; //El primer y ultimo nodo apuntan a null
     }
 
     public void insertFinal(Object element) {
@@ -15,6 +16,7 @@ public class ListaSimplementeEnlazada {
             primerNodo = ultimoNodo = new Nodo(element);
         } else {
             ultimoNodo = ultimoNodo.siguiente = new Nodo(element);
+            ultimoNodo = primerNodo.siguiente;
         }
     }
 
@@ -23,6 +25,7 @@ public class ListaSimplementeEnlazada {
             primerNodo = ultimoNodo = new Nodo(element);
         } else {
             primerNodo = new Nodo(element, primerNodo);
+            head = primerNodo;
         }
     }
 
@@ -59,8 +62,8 @@ public class ListaSimplementeEnlazada {
         if (!isEmpty()){
             Nodo currentNode = primerNodo;
 
-            while (currentNode != null) {
-                System.out.print(currentNode.data + " ");
+            while (currentNode != head) {
+                System.out.print(currentNode.data + " -> ");
                 currentNode = currentNode.siguiente;
             }
         }
@@ -69,4 +72,10 @@ public class ListaSimplementeEnlazada {
     boolean isEmpty(){
         return primerNodo == null;
     }
+
+    public void getFinalNextNode(){
+        System.out.println(ultimoNodo.siguiente.data);
+    }
+
+
 }

@@ -20,13 +20,18 @@ public class TestList {
         lista.print();
         System.out.println("\n");
 
-        for (int i = 0; i < 5; i++) {
+
+        lista2.insertFinal("HOLA");
+        lista2.insertStart("AAA");
+        lista2.insertBefore(44,"HOLA");
+        for (int i = 0; i < 7; i++) {
             num = random.nextInt(0,100);
             lista2.insertFinal(num);
         }
-        lista2.insertFinal("HOLA");
-        lista2.insertStart("AAA");
-        System.out.println("\n" + lista2);
+
         lista2.print();
+        //lista2.getFinalNextNode();
+
+
     }
 }
