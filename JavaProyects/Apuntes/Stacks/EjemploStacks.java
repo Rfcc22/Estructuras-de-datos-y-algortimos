@@ -12,7 +12,13 @@ public class EjemploStacks {
     }
 
     public void push (int element) {
-        stack[++peek] = element;
+        try {
+            stack[++peek] = element;
+        } catch (ArrayIndexOutOfBoundsException e){
+            peek = peek-1;
+            //stack[peek] = element;
+            System.out.println("Overflow error");
+        }
     }
 
     public int pop () {
@@ -21,6 +27,7 @@ public class EjemploStacks {
             System.out.println("Underflow\nProgram Terminated");
             System.exit(-1);
         }
+        stack[peek] = 0;
         return stack[peek--];
     }
 
